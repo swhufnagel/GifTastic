@@ -1,0 +1,81 @@
+body{
+    color:white;
+    background-image: url(images/waterback.jpeg);
+    max-width: auto;
+}
+.gifs{
+    height: 200px;
+    width:200px;
+    margin: 5px;
+    display: block;
+    margin-bottom:10px;
+}
+.gifcontainer{
+    float:left;
+}
+.box{
+    text-align:center;
+    border-radius: 50%;
+    height: 300px;
+    background-image: url(images/greenback.jpg);
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    border: 2px solid black;
+    max-width: 770px;
+}
+#searchTerm{
+    max-width: 600px;
+}
+.form-group{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    height: 30%;
+    width: 50%;
+    margin: -15% 0 0 -25%;
+}
+.buttons{
+    color: white;
+    background-image: url(images/dirtback3.png);
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+}
+.ratings{
+    overflow-x: hidden;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color:black;
+}
+.logo{
+    height:230px;
+    width:700px;
+    margin-bottom: 10px;
+}
+.btn{
+    padding:2px;
+    vertical-align: middle;
+    height:30px;
+    border: 1px solid black;
+    background-image: url(images/dirtback3.png);
+}
+.download{
+    border-radius: 50%;
+    border: 1.5px solid black;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: rgba(128, 128, 128, 0);
+}
+.buttonList{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    height: 30%;
+    width: 50%;
+    margin: -15% 0 0 -25%;
+    vertical-align: middle;
+    margin-top:25px;;
+   
+}
