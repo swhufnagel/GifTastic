@@ -5,7 +5,7 @@ body{
     margin-right: auto;
     background-image: url(images/waterback.jpeg);
     background-size: auto;
-    overflow: hidden;
+    overflow: auto;
 }
 .gifs{
     height: 200px;
@@ -136,7 +136,7 @@ margin-top:25px;;
     margin: -15% 0 0 -25%;
 }
 body{
-    overflow: hidden;
+    overflow-x: hidden;
     width: 768px;
     background-size: 800px 760px;
 }
