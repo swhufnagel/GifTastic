@@ -328,4 +328,7 @@ margin-top:25px;;
     .favoritesbar{
         height:auto;
     }
+    body{
+        overflow-x: hidden;
+    }
 }
