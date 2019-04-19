@@ -75,11 +75,11 @@ for (var i = 0; i < buttons.length; i++) {
     newButton.text(buttons[i]);
     $('.buttonList').append(newButton);
 }
-$(document).on("click", "#clear", function () {
+$(document).on("click touchstart", "#clear", function () {
     event.preventDefault();
     $('.results').empty();
 })
-$(document).on("click", "#search", function () {
+$(document).on("click touchstart", "#search", function () {
     event.preventDefault();
     searchTerm = $('#searchTerm').val();
     searched = true;
@@ -92,13 +92,13 @@ $(document).on("click", "#search", function () {
         $('#searchTerm').val("");
     }
 })
-$(document).on("click", '.buttons', function () {
+$(document).on("click touchstart", '.buttons', function () {
     event.preventDefault();
     searchTerm = $(this).text();
     queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchTerm + "&api_key=ZvdrAaokoiXgdWWmhGKsMAtlvpCK0ly7&limit=10";
     searchAPI();
 })
-$(document).on("click", '.gifs', function () {
+$(document).on("click touchstart", '.gifs', function () {
     var state = $(this).attr('data-state');
     if (state === 'still') {
         $(this).attr('src', $(this).attr('data-animate'));
@@ -110,7 +110,7 @@ $(document).on("click", '.gifs', function () {
         state = $(this).attr('data-state', 'still');
     }
 })
-$(document).on("click", ".favorite", function () {
+$(document).on("click touchstart", ".favorite", function () {
     $(".faves").removeClass("hide");
     $("#room").removeClass("col-md-12")
     $("#room").addClass("col-md-8")
