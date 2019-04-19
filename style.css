@@ -13,9 +13,13 @@ body{
     margin: 5px;
     display: block;
     margin-bottom:10px;
+    position:relative;
 }
 .gifcontainer{
     float:left;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
 }
 .box{
     text-align:center;
@@ -25,11 +29,20 @@ body{
     display: block;
     margin-left:auto;
     margin-right:auto;
-    border: 2px solid black;
+    margin-bottom: 20px;
+    border: 3px solid rgb(158, 128, 100);
     max-width: 770px;
+    box-shadow: 9px 9px 10px 5px rgb(206, 195, 165);
 }
 #searchTerm{
     max-width: 600px;
+    outline: none;
+}
+#search:hover, #clear:hover{
+    border: 1px solid tan;
+}
+#search:active, #clear:active{
+    outline:none;
 }
 .form-group{
     position: absolute;
@@ -45,6 +58,10 @@ body{
     margin-right: 5px;
     margin-bottom: 5px;
     border: 1px solid black;
+    border-radius: 15%;
+}
+.buttons:hover{
+    border: 1px solid tan;
 }
 .ratings{
     overflow-x: hidden;
@@ -73,8 +90,20 @@ body{
     border: 1.5px solid black;
     font-size: 14px;
     font-weight: 700;
-    background-color: rgba(128, 128, 128, 0);
+    background-image: url(images/greenback.jpg);
+    margin-right:25px;
+    color: black;
+
 }
+/* .favorite{
+    border-radius: 50%;
+    border: 1.5px solid black;
+    font-size: 14px;
+    font-weight: 700;
+    background-image: url(images/greenback.jpg);
+    color: black;
+
+} */
 .buttonList{
     position: absolute;
     top: 10%;
@@ -187,6 +216,46 @@ margin-top:25px;;
     margin: -15% 0 0 -42%;
 }
 .logo{
-    margin-left: 0px;
+    margin-left: -10px;
+
+}
+.result{
+    width: 570px;
+}
+.gifs{
+    margin-right: 30px;
 }
 }
+.fa-star{
+    position: relative;
+    top: 35px;
+    left: 15px;
+    z-index: 1;
+    color:gold
+}
+.favoritesbar{
+    color: white;
+    font-weight: 700;
+    background-image: url(images/greenback.jpg);
+    width: 100%;
+    text-align:center;
+    border: 1px solid silver;
+    height:auto;
+    padding-bottom: 5px;
+}
+.faves{
+    margin-top:20px;
+}
+.hide{
+    display: none;
+}
+.favoritegifs{
+    background-image: url(images/waterback.jpeg);
+    width: 95%;
+    height:auto;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
