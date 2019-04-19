@@ -3,7 +3,6 @@ var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchTerm + "&api_ke
 var buttons = ['Carribean', 'Hawaii', 'Greece', 'Madagascar', 'Galapagos', 'Australia', 'New Zealand'];
 var searched = false;
 var idTag = "";
-console.log(queryURL);
 function searchAPI() {
     $.ajax({
         url: queryURL,
@@ -13,6 +12,7 @@ function searchAPI() {
         for (i = 0; i < 10; i++) {
             idTag = searchTerm + i;
             var newDiv = $('<div>');
+            searchTerm = searchTerm.replace(/ /g,'');
             newDiv.addClass("gifcontainer " + searchTerm + i)
             var newImage = $('<img>');
             newDiv.append(newImage);
@@ -30,7 +30,7 @@ function searchAPI() {
                 return splitStr.join(' ');
             }
 
-            title.text(titleCase(response.data[i].title.substring(0, 25)));
+            title.text(titleCase(response.data[i].title.substring(0, 22)));
             capDiv.append(title);
             capDiv.append(rating);
             newDiv.append(capDiv);
@@ -111,7 +111,6 @@ $(document).on("click", '.gifs', function () {
     }
 })
 $(document).on("click", ".favorite", function () {
-    console.log($(this).attr("clicked"));
     $(".faves").removeClass("hide");
     $("#room").removeClass("col-md-12")
     $("#room").addClass("col-md-8")
@@ -119,19 +118,25 @@ $(document).on("click", ".favorite", function () {
         $(this).attr("clicked" ,"true");
     $(this).removeClass("far fa-star").addClass("fas fa-star");
     var parentCard = $(this).attr("data-parent");
+    parentCard = parentCard.replace(/ /g,'');
+    console.log(parentCard);
+    // for(var i=0;i<parentCard.length;i++){
+    //     var words = [];
+    //     words.push(parentCard[i]);
+    //     console.log(i);
+    //     words.join("");
+    //     parentCard = words;
+    // }
     var newFavCard = $("<Div>", {id: "fav"+parentCard, class: "favorites"});
-        console.log(parentCard)
+
         $(newFavCard).append($("." + parentCard).html());
         $(".favoritegifs").append(newFavCard);
-    console.log(parentCard); 
     }
     else{
         $(this).attr("clicked", "false");
         $(this).removeClass("fas fa-star").addClass("far fa-star");
         parentCard = $(this).attr("data-parent");
-        console.log($("#fav" + parentCard).html());
         var currentId = ("fav" + parentCard);
-        console.log(currentId);
         $('#'+currentId).remove();
         $(this).attr("clicked", "false");
         $(this).removeClass("fas fa-star");
